@@ -2,7 +2,7 @@
 
 namespace CepWeatherApi.Controllers
 {
-    public class WeatherController : Controller
+    public class WeatherForecastController : Controller
     {
         public IActionResult Index()
         {
