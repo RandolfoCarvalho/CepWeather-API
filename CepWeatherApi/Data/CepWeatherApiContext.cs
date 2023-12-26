@@ -15,8 +15,8 @@ namespace CepWeatherApi.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(
-                "server=localhost;user=root;port=3306;Connect Timeout=5;",
-                new MySqlServerVersion(new Version(8, 0, 100))
+                "server=localhost;user=root;port=3306;database=cepweatherapi;Connect Timeout=5;",
+                new MySqlServerVersion(new Version(8, 0, 0))
             );
         }
         // Declare DbSet para o modelo CepModel

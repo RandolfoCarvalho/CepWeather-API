@@ -1,0 +1,4 @@
+# Arquivo .gitignore para o projeto
+
+# Ignorar a pasta .vs/
+.vs/

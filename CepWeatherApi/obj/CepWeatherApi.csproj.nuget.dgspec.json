@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp\\web\\cepweatherapi\\CepWeatherApi.csproj": {}
+    "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj": {}
   },
   "projects": {
-    "D:\\temp\\web\\cepweatherapi\\CepWeatherApi.csproj": {
+    "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp\\web\\cepweatherapi\\CepWeatherApi.csproj",
+        "projectUniqueName": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
         "projectName": "CepWeatherApi",
-        "projectPath": "D:\\temp\\web\\cepweatherapi\\CepWeatherApi.csproj",
+        "projectPath": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
         "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
-        "outputPath": "D:\\temp\\web\\cepweatherapi\\obj\\",
+        "outputPath": "D:\\temp\\web\\CepWeatherApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,7 +48,7 @@
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0-beta.2, )"
             }
           },
           "imports": [

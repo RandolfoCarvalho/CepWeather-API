@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J6gde4fHkPSJGuc6lISWn/kxZrX+RtRi8qhY5ifEhrBEtek92/unWuMBisZNj9Vq9zLfX920a5DP/QCs9wP4TA==",
+  "dgSpecHash": "3Xi5Mpfc/0jxiPVeIZ1ejb+0TK8igVlINf0bQvoryhCYVSixcuPzahvcXknGxjoXH4+9OF+fl87TjWoEqD7UIA==",
   "success": true,
-  "projectFilePath": "D:\\temp\\web\\cepweatherapi\\CepWeatherApi.csproj",
+  "projectFilePath": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
@@ -28,8 +28,8 @@
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
-    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
-    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\mysqlconnector\\2.3.1\\mysqlconnector.2.3.1.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.0-beta.2\\pomelo.entityframeworkcore.mysql.8.0.0-beta.2.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
