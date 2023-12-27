@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CepWeatherApi
 build_property.RootNamespace = CepWeatherApi
-build_property.ProjectDir = D:\temp\web\CepWeatherApi\
+build_property.ProjectDir = C:\temp\projetos\CepWeather-API\CepWeather-API\CepWeatherApi\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\temp\web\CepWeatherApi
+build_property.MSBuildProjectDirectory = C:\temp\projetos\CepWeather-API\CepWeather-API\CepWeatherApi
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/temp/web/CepWeatherApi/Views/Home/Edit.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/Home/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/Home/Index.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/Home/Privacy.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/Shared/Error.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/WeatherForecast/Index.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/WeatherForecast/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/_ViewImports.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/_ViewStart.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/temp/web/CepWeatherApi/Views/Shared/_Layout.cshtml]
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-pyje5e86mt

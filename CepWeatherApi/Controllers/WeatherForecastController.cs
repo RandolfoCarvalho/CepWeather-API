@@ -4,9 +4,25 @@ namespace CepWeatherApi.Controllers
 {
     public class WeatherForecastController : Controller
     {
-        public IActionResult Index()
+        private readonly WeatherForecastService weatherForecastService;
+
+        public WeatherForecastController(WeatherForecastService weatherForecastService)
         {
-            return View();
+            this.weatherForecastService = weatherForecastService;
+        }
+        
+        [HttpGet("/WeatherForecast")]
+        public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude)
+        {
+            try
+            {
+                var forecast = await weatherForecastService.GetWeatherForecast(latitude, longitude);
+                return Ok(forecast);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro ao obter previsão do tempo: {ex.Message}");
+            }
         }
     }
 }

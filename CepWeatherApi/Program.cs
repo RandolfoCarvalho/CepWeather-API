@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore; 
 using Microsoft.Extensions.Configuration;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using CepWeatherApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +11,7 @@ builder.Services.AddControllersWithViews();
 
 string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<CepWeatherApiContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddHttpClient<WeatherForecastService>();
 
 var app = builder.Build();
 

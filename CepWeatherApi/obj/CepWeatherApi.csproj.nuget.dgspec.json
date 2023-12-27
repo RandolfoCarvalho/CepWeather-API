@@ -1,32 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj": {}
+    "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj": {}
   },
   "projects": {
-    "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj": {
+    "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
+        "projectUniqueName": "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj",
         "projectName": "CepWeatherApi",
-        "projectPath": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
-        "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
-        "outputPath": "D:\\temp\\web\\CepWeatherApi\\obj\\",
+        "projectPath": "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj",
+        "packagesPath": "C:\\Users\\rando\\.nuget\\packages\\",
+        "outputPath": "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,18 +41,18 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[5.0.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[8.0.0-beta.2, )"
+              "version": "[5.0.10, )"
             },
             "System.Net.Http": {
               "target": "Package",
@@ -74,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
