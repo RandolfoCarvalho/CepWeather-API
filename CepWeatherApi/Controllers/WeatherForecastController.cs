@@ -10,8 +10,12 @@ namespace CepWeatherApi.Controllers
         {
             this.weatherForecastService = weatherForecastService;
         }
+        public IActionResult Index()
+        {
+            return View();
+        }
         
-        [HttpGet("/WeatherForecast")]
+        //[HttpGet("/WeatherForecast")]
         public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude)
         {
             try
@@ -24,5 +28,6 @@ namespace CepWeatherApi.Controllers
                 return BadRequest($"Erro ao obter previsão do tempo: {ex.Message}");
             }
         }
+        
     }
 }
