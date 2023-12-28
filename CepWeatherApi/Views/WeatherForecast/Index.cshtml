@@ -1,7 +1,28 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
 @{
     ViewData["Title"] = "Weather";
 }
-<h2>teste </h2>
+
+<h4>Weather</h4>
+<h2>Consultar Clima</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="WeatherForecast" asp-action="GetWeatherForecast" method="post">
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" name="Latitude" />
+
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" name="Longitude" />
+
+            <button type="submit">Obter Clima</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -13,7 +13,7 @@ public class WeatherForecastService
 
     public async Task<string> GetWeatherForecast(double latitude, double longitude)
     {
-        string apiUrl = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=temperature_2m";
+        string apiUrl = $"https://api.open-meteo.com/v1/forecast?latitude={1.1}&longitude={1.1}&hourly=temperature_2m";
 
         var response = await httpClient.GetStringAsync(apiUrl);
 

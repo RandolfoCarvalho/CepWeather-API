@@ -3723,19 +3723,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\": {}
+    "C:\\Users\\rando\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
+      "projectUniqueName": "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj",
       "projectName": "CepWeatherApi",
-      "projectPath": "D:\\temp\\web\\CepWeatherApi\\CepWeatherApi.csproj",
-      "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
-      "outputPath": "D:\\temp\\web\\CepWeatherApi\\obj\\",
+      "projectPath": "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj",
+      "packagesPath": "C:\\Users\\rando\\.nuget\\packages\\",
+      "outputPath": "C:\\temp\\projetos\\CepWeather-API\\CepWeather-API\\CepWeatherApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3743,6 +3747,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3795,7 +3800,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },

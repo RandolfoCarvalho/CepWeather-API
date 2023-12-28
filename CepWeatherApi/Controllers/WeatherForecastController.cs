@@ -1,33 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using CepWeatherApi.Models;
 
 namespace CepWeatherApi.Controllers
 {
     public class WeatherForecastController : Controller
     {
-        private readonly WeatherForecastService weatherForecastService;
+        private readonly WeatherForecastService _weatherForecastService;
 
         public WeatherForecastController(WeatherForecastService weatherForecastService)
         {
-            this.weatherForecastService = weatherForecastService;
+            _weatherForecastService = weatherForecastService;
         }
         public IActionResult Index()
         {
             return View();
         }
-        
-        //[HttpGet("/WeatherForecast")]
+
+        [HttpPost]
         public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude)
         {
             try
             {
-                var forecast = await weatherForecastService.GetWeatherForecast(latitude, longitude);
-                return Ok(forecast);
-            }
-            catch (Exception ex)
+                var consulta = await _weatherForecastService.GetWeatherForecast(latitude, longitude);
+                return Ok(consulta);
+
+            } catch(Exception e)
             {
-                return BadRequest($"Erro ao obter previsão do tempo: {ex.Message}");
+                return BadRequest("Não foi possivel consultar a previsão" + e.Message);
             }
         }
-        
+
+
+
+
     }
 }
