@@ -8,6 +8,11 @@ namespace CepWeatherApi.Models
         public double Longitude { get; set; }
 
 
+        public Weather(double latitude, double longitude)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+        }
 
     }
 }

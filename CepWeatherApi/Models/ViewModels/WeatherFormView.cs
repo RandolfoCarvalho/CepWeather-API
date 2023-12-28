@@ -2,5 +2,7 @@
 {
     public class WeatherFormView
     {
+        public Weather Weather { get; set; }
+
     }
 }
