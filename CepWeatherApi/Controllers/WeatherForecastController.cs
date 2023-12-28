@@ -22,6 +22,7 @@ namespace CepWeatherApi.Controllers
             try
             {
                 var consulta = await _weatherForecastService.GetWeatherForecast(latitude, longitude);
+
                 return Ok(consulta);
 
             } catch(Exception e)
