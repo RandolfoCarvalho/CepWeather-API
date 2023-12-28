@@ -14,7 +14,7 @@ public class WeatherForecastService
         _context = context;
 
     }
-    public async Task InserAsync(Weather weather)
+    public async Task InsertAsync(Weather weather)
     {
         _context.Add(weather);
         await _context.SaveChangesAsync();

@@ -30,7 +30,7 @@ namespace CepWeatherApi.Controllers
                 var viewModel = new WeatherFormView { Weather = weather};
                 return View(viewModel);
             }
-            await _weatherForecastService.InserAsync(weather);
+            await _weatherForecastService.InsertAsync(weather);
             return RedirectToAction(nameof(Index));
         }
         [HttpPost]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CepWeatherApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2a64d00f6d739f12fb55f18f35dde1f267c625b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f88bb57c4027a693b711f30baacc980b14e288b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CepWeatherApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CepWeatherApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

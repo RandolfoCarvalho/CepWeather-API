@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/temp/web/CepWeather-API/CepWeatherApi/Views/WeatherForecast/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/temp/web/CepWeather-API/CepWeatherApi/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

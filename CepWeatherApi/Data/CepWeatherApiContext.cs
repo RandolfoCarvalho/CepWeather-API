@@ -21,5 +21,6 @@ namespace CepWeatherApi.Data
         }
         // Declare DbSet para o modelo CepModel
         public DbSet<Cep> Cep { get; set; }
+        public DbSet<Weather> Weather { get; set; }
     }
 }
