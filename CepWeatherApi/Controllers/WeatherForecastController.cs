@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CepWeatherApi.Models;
 using CepWeatherApi.Models.ViewModels;
+using System.Globalization;
 
 namespace CepWeatherApi.Controllers
 {
@@ -25,7 +26,7 @@ namespace CepWeatherApi.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Weather weather)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 var viewModel = new WeatherFormView { Weather = weather};
                 return View(viewModel);

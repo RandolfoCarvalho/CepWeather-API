@@ -4,6 +4,13 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using CepWeatherApi.Data;
+using System.Globalization;
+
+
+
+var cultureInfo = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container..

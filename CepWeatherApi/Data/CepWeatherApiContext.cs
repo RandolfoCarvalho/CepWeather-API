@@ -12,6 +12,16 @@ namespace CepWeatherApi.Data
         public CepWeatherApiContext(DbContextOptions<CepWeatherApiContext> options) : base(options)
         {
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Weather>()
+                .Property(e => e.Latitude)
+                .HasColumnType("double");
+
+            modelBuilder.Entity<Weather>()
+                .Property(e => e.Longitude)
+                .HasColumnType("double");
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(
