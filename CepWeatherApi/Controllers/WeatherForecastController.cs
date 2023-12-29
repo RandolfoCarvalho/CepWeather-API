@@ -2,6 +2,7 @@
 using CepWeatherApi.Models;
 using CepWeatherApi.Models.ViewModels;
 using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CepWeatherApi.Controllers
 {
@@ -34,22 +35,18 @@ namespace CepWeatherApi.Controllers
             await _weatherForecastService.InsertAsync(weather);
             return RedirectToAction(nameof(Index));
         }
-        [HttpPost]
-        public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude)
+        [HttpGet]
+        public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
         {
             try
             {
-                var consulta = await _weatherForecastService.GetWeatherForecast(latitude, longitude);
+                var consulta = await _weatherForecastService.GetWeatherForecast(latitude, longitude, timezone, inicio, fim);
                 return Ok(consulta);
 
             } catch(Exception e)
             {
-                return BadRequest("Não foi possivel consultar a previsão" + e.Message);
+                return BadRequest("Não foi possivel consultar a previsão " + e.Message);
             }
         }
-
-
-
-
     }
 }

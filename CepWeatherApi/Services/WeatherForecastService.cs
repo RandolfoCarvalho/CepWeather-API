@@ -1,8 +1,10 @@
 ﻿using CepWeatherApi.Data;
 using CepWeatherApi.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class WeatherForecastService
 {
@@ -19,9 +21,14 @@ public class WeatherForecastService
         _context.Add(weather);
         await _context.SaveChangesAsync();
     }
-    public async Task<string> GetWeatherForecast(double latitude, double longitude)
+    [HttpGet]
+    public async Task<string> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
     {
-        string apiUrl = $"https://api.open-meteo.com/v1/forecast?latitude={1.1}&longitude={1.1}&hourly=temperature_2m&timezone=America/Sao_Paulo&start_date=2023-12-28&end_date=2023-12-28";
+        string inicioData = inicio.ToString("yyyy-MM-dd");
+        string fimData = fim.ToString("yyyy-MM-dd");
+
+        string apiUrl = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=" +
+            $"temperature_2m&timezone=America/Denver&start_date={inicioData}&end_date={fimData}";
         var response = await _httpClient.GetStringAsync(apiUrl);
         return response;
     }
