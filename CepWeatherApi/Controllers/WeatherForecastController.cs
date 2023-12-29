@@ -23,6 +23,17 @@ namespace CepWeatherApi.Controllers
             return View();
         }
 
+        //[HttpGet("{id}")]
+        public IActionResult GetAtribbutes(long id)
+        {
+            var result = _weatherForecastService.FindById(id);
+            if(result == null)
+            {
+                return NotFound("O Id não existe");
+            }
+            return Ok(result);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Weather weather)

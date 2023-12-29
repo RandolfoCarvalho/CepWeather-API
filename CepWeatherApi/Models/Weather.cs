@@ -29,8 +29,8 @@ namespace CepWeatherApi.Models
             Latitude = latitude;
             Longitude = longitude;
             Timezone = timezone;
-            Inicio = DateTime.Parse(inicio.ToString("yyyy-MM-dd"));
-            Fim = DateTime.Parse(fim.ToString("yyyy-MM-dd"));
+            Inicio = inicio;
+            Fim = fim;
         }
 
     }

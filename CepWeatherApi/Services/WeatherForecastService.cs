@@ -1,5 +1,6 @@
 ﻿using CepWeatherApi.Data;
 using CepWeatherApi.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http;
@@ -16,11 +17,24 @@ public class WeatherForecastService
         _context = context;
 
     }
+    public List<Weather> FindAll()
+    {
+        return _context.Weather.ToList();
+    }
+    public Weather FindById(long id)
+    {
+        var result = _context.Weather.FirstOrDefault(p => p.Id == id);
+        return result;
+    }
+
     public async Task InsertAsync(Weather weather)
     {
         _context.Add(weather);
         await _context.SaveChangesAsync();
     }
+
+    
+
     [HttpGet]
     public async Task<string> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
     {
