@@ -31,7 +31,6 @@ namespace CepWeatherApi.Controllers
             }
             return View(result);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Weather weather)
