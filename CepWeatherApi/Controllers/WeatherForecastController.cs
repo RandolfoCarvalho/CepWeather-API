@@ -24,9 +24,9 @@ namespace CepWeatherApi.Controllers
         }
 
         //[HttpGet("{id}")]
-        public IActionResult GetAtribbutes(long id)
+        public IActionResult GetAll()
         {
-            var result = _weatherForecastService.FindById(id);
+            var result = _weatherForecastService.FindAll();
             if(result == null)
             {
                 return NotFound("O Id não existe");

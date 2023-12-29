@@ -1,10 +1,71 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model IEnumerable<CepWeatherApi.Models.Weather>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h2> @ViewData["Title"] </h2>
 
-<h2> Deu certo </h2>
+<p> <a asp-action="Create" class="btn btn-default"> Create New </a></p>
+<table class="table table=striped table-hover">
+    <thead>
+        <tr class="success">
+            <th>
+                @*Renderiza os conteudos passados*@
+                @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @*Renderiza os conteudos passados*@
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+            <th>
+                @*Renderiza os conteudos passados*@
+                @Html.DisplayNameFor(model => model.Timezone)
+            </th>
+            <th>
+                @*Renderiza os conteudos passados*@
+                @Html.DisplayNameFor(model => model.Inicio)
+            </th>
+            <th>
+                @*Renderiza os conteudos passados*@
+                @Html.DisplayNameFor(model => model.Fim)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item? in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Latitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Timezone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Inicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fim)
+                </td>
+                <td>
+                    @*Passa o Id do vendedor que eu clica no asp-route-id*@
+                    @*Quando algum desses for clicado vai acionar o método do controlador*@
+                    <a asp-action="Edit" asp-route-id="@item.Id"> Edit </a>
+                    <a asp-action="Details" asp-route-id="@item.Id"> Details </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"> Delete </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
