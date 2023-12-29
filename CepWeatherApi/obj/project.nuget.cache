@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ymuI/5XamP9KhYi1SP9w9I+NJHoKyDvFIo1yqwze+8cGP9BaL6T07RAFWhOgY/mbElh+o8Ezaq1oBjv8ZhFCeQ==",
+  "dgSpecHash": "J8ZDTCh6FtKJ93l2qO3wyGFOtgo/L1jfMsWq9PMz7rsW9fAq3/9Ua3HA/wN7G61WS2Zct4WDB74S7WekmMpoVw==",
   "success": true,
   "projectFilePath": "D:\\temp\\web\\CepWeather-API\\CepWeatherApi\\CepWeatherApi.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\mysqlconnector\\2.0.0\\mysqlconnector.2.0.0.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.0\\pomelo.entityframeworkcore.mysql.6.0.0.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

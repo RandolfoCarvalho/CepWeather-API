@@ -3,6 +3,7 @@ using CepWeatherApi.Models;
 using CepWeatherApi.Models.ViewModels;
 using System.Globalization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Newtonsoft.Json.Linq;
 
 namespace CepWeatherApi.Controllers
 {
@@ -41,7 +42,7 @@ namespace CepWeatherApi.Controllers
                 return View(viewModel);
             }
             await _weatherForecastService.InsertAsync(weather);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(GetWeatherForecast));
         }
         [HttpGet]
         public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)

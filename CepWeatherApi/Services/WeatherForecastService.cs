@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Newtonsoft.Json.Linq;
 
 public class WeatherForecastService
 {
@@ -33,6 +33,10 @@ public class WeatherForecastService
         await _context.SaveChangesAsync();
     }
 
+   /* public string ToJson()
+    {
+
+    } */
     
 
     [HttpGet]
@@ -42,7 +46,7 @@ public class WeatherForecastService
         string fimData = fim.ToString("yyyy-MM-dd");
 
         string apiUrl = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=" +
-            $"temperature_2m&timezone=America/Denver&start_date={inicioData}&end_date={fimData}";
+            $"temperature_2m&timezone=America/Sao_Paulo&start_date=2023-07-01&end_date=2023-07-02";
         var response = await _httpClient.GetStringAsync(apiUrl);
         return response;
     }
