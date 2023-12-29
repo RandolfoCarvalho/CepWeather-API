@@ -22,8 +22,6 @@ namespace CepWeatherApi.Controllers
         {
             return View();
         }
-
-        //[HttpGet("{id}")]
         public IActionResult GetAll()
         {
             var result = _weatherForecastService.FindAll();
@@ -31,7 +29,7 @@ namespace CepWeatherApi.Controllers
             {
                 return NotFound("O Id não existe");
             }
-            return Ok(result);
+            return View(result);
         }
 
         [HttpPost]
