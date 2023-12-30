@@ -4,6 +4,7 @@ using CepWeatherApi.Models.ViewModels;
 using System.Globalization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace CepWeatherApi.Controllers
 {
@@ -46,6 +47,45 @@ namespace CepWeatherApi.Controllers
             return RedirectToAction(nameof(Index));
             
         }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if(id == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "Id not provided" });
+            }
+
+            var obj = _weatherForecastService.FindById(id.Value);
+            WeatherFormView viewModel = new WeatherFormView { Weather = obj };
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, Weather weather)
+        {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new WeatherFormView { Weather = weather };
+                return View(viewModel);
+            }
+            if (id != weather.Id)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "Id mismatch" });
+            }
+            try
+            {
+                await _weatherForecastService.Update(weather);
+                return RedirectToAction(nameof(Index));
+            } catch (DBConcurrencyException e)
+            {
+                return RedirectToAction(nameof(Error), new { Message = e.Message });
+            }
+
+
+
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> GetWeatherForecast(Weather weather)
         {
@@ -62,5 +102,8 @@ namespace CepWeatherApi.Controllers
                 return BadRequest("Não foi possivel consultar a previsão " + e.Message);
             }
         }
+
+
+
     }
 }

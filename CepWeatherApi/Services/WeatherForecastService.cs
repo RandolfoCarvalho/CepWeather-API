@@ -6,6 +6,8 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 public class WeatherForecastService
 {
@@ -21,7 +23,14 @@ public class WeatherForecastService
     {
         return _context.Weather.ToList();
     }
-    public Weather FindById(long id)
+
+    /*public async Task<Weather> FindById(int id)
+    {
+        //da um join para buscar também o departamento pelo Id
+        //isso é chamado de eager loading, carregar outros objetos associados ao obj principal, que no caso o princial 
+        return await _context.Weather.FirstOrDefaultAsync(obj => obj.Id == id);
+    } */
+    public Weather FindById(int id)
     {
         var result = _context.Weather.FirstOrDefault(p => p.Id == id);
         return result;
@@ -32,6 +41,24 @@ public class WeatherForecastService
         _context.Add(weather);
         await _context.SaveChangesAsync();
     }
+    internal async Task Update(Weather weather)
+    {
+        bool hasAny = await _context.Weather.AnyAsync(x => x.Id == weather.Id);
+        if(!hasAny)
+        {
+            throw new KeyNotFoundException("Id not found");
+        } 
+        try
+        {
+            _context.Update(weather);
+            await _context.SaveChangesAsync();
+
+        } catch(DBConcurrencyException e)
+        {
+            throw new DBConcurrencyException("Erro de DbConcurrency " + e.Message);
+        }
+    }
+
     [HttpPost]
     public async Task<string> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
     {
@@ -44,4 +71,6 @@ public class WeatherForecastService
         var response = await _httpClient.GetStringAsync(apiUrl);
         return response;
     }
+
+   
 }

@@ -1,0 +1,69 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+
+*@
+@model CepWeatherApi.Models.ViewModels.WeatherFormView;
+@{
+    ViewData["Title"] = "Edit";
+}
+<h2> @ViewData["Title"] </h2>
+
+<h4> Seller </h4>
+<hr />
+@*Row garante que a div vai ocupar a largura da tela*@
+<div class="row">
+    @*Usando 1/3 da tela, por que bootstrap divide a tela em 12 partes e 4 é 1/3 da tela*@
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Weather.Id" />
+            <div class="form-group">
+                @*Aqui mesmo já esta preenchendo o atributo do tipo Seller do SellerFormViewModel*@
+                <label asp-for="Weather.Latitude" class="control-label"></label>
+                <input asp-for="Weather.Latitude" class="form-control" />
+                <span asp-validation-for="Weather.Latitude" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                @**@
+                <label asp-for="Weather.Longitude" class="control-label"></label>
+                <input asp-for="Weather.Longitude" class="form-control" />
+                <span asp-validation-for="Weather.Longitude" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                @**@
+                <label asp-for="Weather.Timezone" class="control-label"></label>
+                <input asp-for="Weather.Timezone" class="form-control" />
+                <span asp-validation-for="Weather.Timezone" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                @**@
+                <label asp-for="Weather.Inicio" class="control-label"></label>
+                <input asp-for="Weather.Inicio" class="form-control" />
+                <span asp-validation-for="Weather.Inicio" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                @**@
+                <label asp-for="Weather.Fim" class="control-label"></label>
+                <input asp-for="Weather.Fim" class="form-control" />
+                <span asp-validation-for="Weather.Fim" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+@*Para a validacao acontecer no nivel de javascript*@
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
