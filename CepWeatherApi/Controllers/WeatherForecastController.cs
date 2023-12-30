@@ -5,6 +5,8 @@ using System.Globalization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json.Linq;
 using System.Data;
+using Newtonsoft.Json;
+using System.Text.Json.Nodes;
 
 namespace CepWeatherApi.Controllers
 {
@@ -85,19 +87,47 @@ namespace CepWeatherApi.Controllers
 
         }
 
-
-        [HttpPost]
-        public async Task<IActionResult> GetWeatherForecast(Weather weather)
+        public IActionResult Details(int? id)
         {
+            if(id == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "Id not provided" });
+            }
+            var obj =  _weatherForecastService.FindById(id.Value);
+            if(obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "obj not found" });
+            }
+            return View(obj);
+
+        }
+
+        public class HourlyData
+        {
+            public List<string> Time { get; set; }
+            public List<double> Temperature_2m { get; set; }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> QueryWeather(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "Id not provided" });
+            }
+            var obj = _weatherForecastService.FindById(id.Value);
+            if (obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "obj not found" });
+            }
             try
             {
-                var teste = $"Latitude: {weather.Latitude}, Longitude: {weather.Longitude}, Timezone: " +
-                    $"{weather.Timezone}, Inicio: {weather.Inicio}, Fim: {weather.Fim}";
-                var consulta = await _weatherForecastService.GetWeatherForecast(weather.Latitude, weather.Longitude, weather.Timezone,
-                    weather.Inicio, weather.Fim);
-                return Ok(new { Consulta = consulta, Teste = teste });
+                var consulta = await _weatherForecastService.GetWeatherForecast(obj.Latitude, obj.Longitude, obj.Timezone,
+                    obj.Inicio, obj.Fim);
+                return Ok(consulta);
 
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return BadRequest("Não foi possivel consultar a previsão " + e.Message);
             }

@@ -40,12 +40,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/WeatherForecast/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/WeatherForecast/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/WeatherForecast/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/WeatherForecast/QueryWeather.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlckZvcmVjYXN0XFF1ZXJ5V2VhdGhlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/temp/projetos/CepWeather-API/CepWeather-API/CepWeatherApi/Views/_ViewImports.cshtml]

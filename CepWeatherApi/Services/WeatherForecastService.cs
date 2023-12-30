@@ -30,7 +30,7 @@ public class WeatherForecastService
         //isso é chamado de eager loading, carregar outros objetos associados ao obj principal, que no caso o princial 
         return await _context.Weather.FirstOrDefaultAsync(obj => obj.Id == id);
     } */
-    public Weather FindById(int id)
+    public  Weather FindById(int id)
     {
         var result = _context.Weather.FirstOrDefault(p => p.Id == id);
         return result;
