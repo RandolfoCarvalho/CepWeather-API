@@ -2,10 +2,6 @@
 using CepWeatherApi.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
@@ -57,7 +53,7 @@ public class WeatherForecastService
     {
         _context.Remove(weather);
         _context.SaveChanges();
-    }
+    } 
     [HttpPost]
     public async Task<string> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
     {
