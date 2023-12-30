@@ -19,7 +19,6 @@ namespace CepWeatherApi.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime Fim { get; set; }
-
         public Weather()
         {
 

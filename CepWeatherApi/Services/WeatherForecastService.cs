@@ -58,7 +58,12 @@ public class WeatherForecastService
             throw new DBConcurrencyException("Erro de DbConcurrency " + e.Message);
         }
     }
-
+   
+    public async void Delete(Weather weather)
+    {
+        _context.Remove(weather);
+        _context.SaveChanges();
+    }
     [HttpPost]
     public async Task<string> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
     {

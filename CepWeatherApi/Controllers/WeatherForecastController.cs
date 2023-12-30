@@ -102,10 +102,19 @@ namespace CepWeatherApi.Controllers
 
         }
 
-        public class HourlyData
+        public IActionResult Delete(int? id)
         {
-            public List<string> Time { get; set; }
-            public List<double> Temperature_2m { get; set; }
+            if(id == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "Id not provided" });
+            }
+            var obj = _weatherForecastService.FindById(id.Value);
+            if(obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { Message = "obj not found" });
+            }
+            _weatherForecastService.Delete(obj);
+            return View();
         }
 
         [HttpGet]
