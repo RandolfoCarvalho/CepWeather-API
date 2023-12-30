@@ -9,9 +9,9 @@ namespace CepWeatherApi.Models
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "O campo {0} precisa ser preenchido")]
-        public double? Latitude { get; set; }
+        public double Latitude { get; set; }
         [Required(ErrorMessage = "O campo {0} precisa ser preenchido")]
-        public double? Longitude { get; set; }
+        public double Longitude { get; set; }
         public string Timezone { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]

@@ -118,3 +118,4 @@ D:\temp\web\CepWeather-API\CepWeatherApi\obj\Debug\net7.0\CepWeatherApi.pdb
 D:\temp\web\CepWeather-API\CepWeatherApi\obj\Debug\net7.0\CepWeatherApi.genruntimeconfig.cache
 D:\temp\web\CepWeather-API\CepWeatherApi\obj\Debug\net7.0\ref\CepWeatherApi.dll
 D:\temp\web\CepWeather-API\CepWeatherApi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\temp\projetos\CepWeather-API\CepWeather-API\CepWeatherApi\bin\Debug\net7.0\Newtonsoft.Json.dll

@@ -32,14 +32,7 @@ public class WeatherForecastService
         _context.Add(weather);
         await _context.SaveChangesAsync();
     }
-
-   /* public string ToJson()
-    {
-
-    } */
-    
-
-    [HttpGet]
+    [HttpPost]
     public async Task<string> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
     {
         string inicioData = inicio.ToString("yyyy-MM-dd");
@@ -47,6 +40,7 @@ public class WeatherForecastService
 
         string apiUrl = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=" +
             $"temperature_2m&timezone=America/Sao_Paulo&start_date=2023-07-01&end_date=2023-07-02";
+
         var response = await _httpClient.GetStringAsync(apiUrl);
         return response;
     }

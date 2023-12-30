@@ -15,23 +15,24 @@ namespace CepWeatherApi.Controllers
         {
             _weatherForecastService = weatherForecastService;
         }
+
+        //Encontra todos as entidades no banco de dados
         public IActionResult Index()
         {
-            return View();
-        }
-        public IActionResult Create()
-        {
-            return View();
-        }
-        public IActionResult GetAll()
-        {
             var result = _weatherForecastService.FindAll();
-            if(result == null)
+            if (result == null)
             {
                 return NotFound("O Id não existe");
             }
             return View(result);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Weather weather)
@@ -42,15 +43,19 @@ namespace CepWeatherApi.Controllers
                 return View(viewModel);
             }
             await _weatherForecastService.InsertAsync(weather);
-            return RedirectToAction(nameof(GetWeatherForecast));
+            return RedirectToAction(nameof(Index));
+            
         }
-        [HttpGet]
-        public async Task<IActionResult> GetWeatherForecast(double latitude, double longitude, string timezone, DateTime inicio, DateTime fim)
+        [HttpPost]
+        public async Task<IActionResult> GetWeatherForecast(Weather weather)
         {
             try
             {
-                var consulta = await _weatherForecastService.GetWeatherForecast(latitude, longitude, timezone, inicio, fim);
-                return Ok(consulta);
+                var teste = $"Latitude: {weather.Latitude}, Longitude: {weather.Longitude}, Timezone: " +
+                    $"{weather.Timezone}, Inicio: {weather.Inicio}, Fim: {weather.Fim}";
+                var consulta = await _weatherForecastService.GetWeatherForecast(weather.Latitude, weather.Longitude, weather.Timezone,
+                    weather.Inicio, weather.Fim);
+                return Ok(new { Consulta = consulta, Teste = teste });
 
             } catch(Exception e)
             {
